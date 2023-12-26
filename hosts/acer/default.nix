@@ -30,34 +30,16 @@
   }; # End networking
 
 
-#  programs.hyprland.enable = true;
-
-#  services.pipewire = {
-#    enable = true;
-#    alsa.enable = true;
-#    alsa.support32Bit = true;
-#    pulse.enable = true;
-#  };
-  
-#  users.users.promis = {
-#    isNormalUser = true;
-#    extraGroups = [ "wheel" "networkmanager" ];
-#  }; # End users
 
  environment.systemPackages = with pkgs; [
-#    micro
-#    bat
-#    kitty
-#    firefox-beta
      distrobox
   ];
 
-#  services = {
-#    openssh.enable = true;
-#    tailscale.enable = true;
-#  }; # End services
+  services = {
+    openssh.enable = true;
+    tailscale.enable = true;
+  }; # End services
   
   system.stateVersion = "23.11"; 
-
 }
 
